@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import Login from "./Login";
 
 function Signup() {
   return (
@@ -54,12 +54,15 @@ function Signup() {
 
               <p>
                 Have Account?{" "}
-                <Link
-                  to="/login"
+                <button
                   className="underline text-blue-500 cursor-pointer"
+                  onClick={() =>
+                    document.getElementById("my_modal_3").showModal()
+                  }
                 >
                   Login
-                </Link>{" "}
+                </button>{" "}
+                <Login />
               </p>
             </div>
           </div>
